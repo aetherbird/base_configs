@@ -2,4 +2,4 @@
 
 Tired of re-writing and modifying config files with every new system and project, I am going to start polishing system configurations here.  
 
-**I hope to lemplatization and automation, as well as Neovim plugins.**
+**I hope to add templatization and automation, as well as Neovim plugins.**
