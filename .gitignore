@@ -8,4 +8,4 @@
 .config/*
 !.config/nvim/
 !.scripts/
-!Readme.md
+!README.md
