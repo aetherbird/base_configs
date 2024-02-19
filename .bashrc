@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-PS1="\[\e]0;\w\a\]\n\[\e[36m\]\u@\h:\w > \e[0m"
-=======
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -104,4 +101,3 @@ export PATH="$PATH:/opt/nvim/bin"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
->>>>>>> d8d6761 (Base configs for bashrc, neovim, vim, and setup script)
