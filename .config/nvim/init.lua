@@ -1,0 +1,2 @@
+require("deepseabird")
+print ("hello")

@@ -1,0 +1,5 @@
+alias ll='ls -lAhtr'
+alias la='ls -A'
+alias l='ls -lAhtr'
+alias lt='ls -lAhtr'
+alias ssh4='ssh -p4444'
