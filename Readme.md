@@ -1,3 +1,5 @@
-### Welcome to my Run Commands and Config files
+### DeepSeaBird Run Commands and Configs
 
-I am tired of re-writing and modifying config files with every new system and project, so I am going to start polishing system configurations here.  
+Tired of re-writing and modifying config files with every new system and project, I am going to start polishing system configurations here.  
+
+**I hope to lemplatization and automation, as well as Neovim plugins.**
