@@ -22,8 +22,8 @@ echo tar xfvz nvim-linux64.tar.gz
 tar xfvz nvim-linux64.tar.gz
 echo mkdir -p /opt/nvim/
 mkdir -p /opt/nvim/
-echo mv ./nvim-linux64/* /opt/nvim/*
-mv ./nvim-linux64/* /opt/nvim/*
+echo cp -av ./nvim-linux64/* /opt/nvim/
+cp -av ./nvim-linux64/* /opt/nvim/
 echo cd ~
 cd ~
 echo rm -r ~/.tmp_neovim/
