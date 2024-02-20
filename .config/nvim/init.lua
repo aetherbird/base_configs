@@ -1,2 +1,2 @@
-require("deepseabird")
+require("deepseabird.remap")
 print ("hello")
