@@ -4,6 +4,7 @@
 !.bash_aliases
 !.vimrc
 !.gitignore
+!.bash_local
 !.config/
 .config/*
 !.config/nvim/
