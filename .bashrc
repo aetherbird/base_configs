@@ -85,6 +85,13 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Check for bash_local file for local-specific definitions
+# This file is ignored by git
+
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
+
 # Default parameter to send to the "less" command
 # -R: show ANSI colors correctly; -i: case insensitive search
 LESS="-R -i"
