@@ -1,2 +1,2 @@
-require("deepseabird")
+require("aetherbird")
 print ("hello")
