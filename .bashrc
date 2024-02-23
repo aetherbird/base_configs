@@ -28,6 +28,12 @@ case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
+# neovim location and default settings
+echo $PATH | grep -Eq "(^|:)/opt/nvim/bin(:|)" || PATH="$PATH:/opt/nvim/bin"
+export PATH
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -58,9 +64,10 @@ PURPLE='\[\e[1;35m\]'
 purple='\[\e[0;35m\]'
 nc='\[\e[0m\]'
 
-# If this is an xterm set the title to user@host:dir
-# PS1="\[\e]0;\w\a\]\n\[\e[36m\]\u@\h:\w > \e[0m"
-# PS1="\[\e[36m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\]:\[\e[33m\]\w\[\e[m\] > "
+# PS1 Prompt
+# Simple Cyan
+# PS1="\[\e[36m\]\u@\h:\W\\$\[\e[m\] "
+# Standard Multi
 PS1="\[\e[36m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\]:\[\e[33m\]\w\[\e[m\]\[\e[33m\] > \[\e[m\]"
 export PS1
 
@@ -73,31 +80,28 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
+# Alias definitions
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+# Check for bash_local file for local-specific definitions
+# This file is ignored by git
+
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
 fi
 
 # Default parameter to send to the "less" command
 # -R: show ANSI colors correctly; -i: case insensitive search
 LESS="-R -i"
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# completion features 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Add sbin directories to PATH.  This is useful on systems that have sudo
+# Add sbin directories to PATH, useful for sudo
 echo $PATH | grep -Eq "(^|:)/sbin(:|)"     || PATH=$PATH:/sbin
 echo $PATH | grep -Eq "(^|:)/usr/sbin(:|)" || PATH=$PATH:/usr/sbin
 
-export PATH="$PATH:/opt/nvim/bin"
-
-export VISUAL=vim
-export EDITOR="$VISUAL"
