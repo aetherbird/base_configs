@@ -1,4 +1,7 @@
-require'nvim-treesitter.configs'.setup {
+return {
+  "nvim-treesitter/nvim-treesitter",
+  config = function ()
+  require("indent blankline").setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust", "javascript", "go", "bash", "awk", "perl", "git_config", "git_rebase", "gitattributes", "http", "php", "python", "ruby", "typescript", "json", "yaml", "csv", "css", "dockerfile", "java", "markdown", "regex" },
 
@@ -24,4 +27,5 @@ require'nvim-treesitter.configs'.setup {
     -- list of language that will be disabled
     additional_vim_regex_highlighting = false,
   },
+  }
 }

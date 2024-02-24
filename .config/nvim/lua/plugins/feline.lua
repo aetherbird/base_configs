@@ -1,0 +1,1 @@
+require('feline').statuscolumn.setup()

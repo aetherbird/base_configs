@@ -10,4 +10,3 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undoarchive"
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.backup = false
-
