@@ -10,5 +10,6 @@ return {
   "nvim-lua/plenary.nvim",                                                                                     
   "freddiehaddad/feline.nvim",                                                                                 
   "nvim-treesitter/playground",                                                                                
+  "nvim-treesitter/nvim-treesitter",  
 }
 
