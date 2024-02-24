@@ -16,7 +16,7 @@ require("lazy").setup({
   "folke/tokyonight.nvim",
   "theprimeagen/harpoon",
   "catppuccin/nvim",
-  "theprimeagen/harpoon",
+  "kepano/flexoki-neovim",
 })
 
 require("lazy").setup(plugins, opts)

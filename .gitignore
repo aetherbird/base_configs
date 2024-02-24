@@ -1,11 +1,11 @@
 /*
-# config files
 !.bashrc
 !.bash_aliases
 !.vimrc
 !.gitignore
 !.config/
 .config/*
+.config/nvim/lazy-lock.json
 !.config/nvim/
 !.scripts/
 !README.md
