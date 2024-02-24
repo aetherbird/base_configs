@@ -18,11 +18,16 @@ require("lazy").setup({
   "catppuccin/nvim",
   "kepano/flexoki-neovim",
   "aetherbird/aetherwind",
-	"mbbill/undotree",
+  "mbbill/undotree",
   "nvim-telescope/telescope.nvim",
-	"nvim-lua/plenary.nvim",
-	"nvim-treesitter/nvim-treesitter",
-	"nvim-treesitter/playground",
+  "nvim-lua/plenary.nvim",
+  "nvim-treesitter/nvim-treesitter",
+  "nvim-treesitter/playground",
+  "VonHeikemen/lsp-zero.nvim",
+  "neovim/nvim-lspconfig",
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/nvim-cmp",
+  "L3MON4D3/LuaSnip",
 })
 
 require("lazy").setup(plugins, opts)

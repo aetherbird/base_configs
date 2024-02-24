@@ -4,3 +4,4 @@ let &packpath = &runtimepath
 source ~/.vimrc
 ]])
 require("aetherbird")
+require("plugins")
