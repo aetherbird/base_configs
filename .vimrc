@@ -1,7 +1,8 @@
-inoremap kj <Esc>
-cnoremap kj <Esc>
-set tabstop=2
-set shiftwidth=2
-set autoindent
 set mouse=
 nnoremap Y Y
+set shiftwidth=2
+set autoindent
+set smartindent
+set nowrap
+set hlsearch
+set incsearch
