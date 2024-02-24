@@ -12,4 +12,3 @@ return {
   "nvim-treesitter/playground",                                                                                
 }
 
-require("plugin-init.treesitter")
