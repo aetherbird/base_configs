@@ -17,6 +17,11 @@ require("lazy").setup({
   "theprimeagen/harpoon",
   "catppuccin/nvim",
   "kepano/flexoki-neovim",
+  "aetherbird/aetherwind",
+  "nvim-telescope/telescope.nvim",
+	"nvim-lua/plenary.nvim",
+	"nvim-treesitter/nvim-treesitter",
+	"nvim-treesitter/playground",
 })
 
 require("lazy").setup(plugins, opts)
