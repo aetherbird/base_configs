@@ -1,5 +1,5 @@
-vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- use move command to move highlighted text with auto indent
