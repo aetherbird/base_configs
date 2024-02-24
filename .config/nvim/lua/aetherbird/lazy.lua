@@ -23,6 +23,7 @@ require("lazy").setup({
   "nvim-lua/plenary.nvim",
   "nvim-treesitter/nvim-treesitter",
   "nvim-treesitter/playground",
+  "freddiehaddad/feline.nvim",
   --  ** Plugins for LSP **
   --  "VonHeikemen/lsp-zero.nvim",
   --  "neovim/nvim-lspconfig",
