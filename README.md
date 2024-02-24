@@ -1,10 +1,8 @@
-## DeepSeaBird Run Commands and Configs
+## Aetherbird Run Commands and Configs
 
-Bespoke system configurations and scripts for Ubuntu and Debian environments, as well as vim and Neovim configurations.  
+User profile configs and scripts for Debian environments, as well as vim and Neovim configurations.  
 
-- TODO:<br>
-	- **Templatization**<br>
-	- **Automation**<br>
-	- Neovim Plugins<br>
-	- Interactive Options and Error Checking<br>
-	- More Scripts<br>
+- bashrc and bash_aliases
+- vimrc<br>
+- full neovim configuration with plugins<br>
+- proper .gitignore config for homedir
