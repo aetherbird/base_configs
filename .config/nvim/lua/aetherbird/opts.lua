@@ -10,3 +10,24 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undoarchive"
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.backup = false
+
+--
+-- for overriding tpope/vim-markdown tabstop
+vim.cmd([[                                                                                          
+set runtimepath^=~/.vim runtimepath+=~/.vim/after                                                   
+let &packpath = &runtimepath                                                                        
+if get(g:, 'markdown_recommended_style', 1)                                                         
+  setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2                                           
+endif                                                                                               
+]])
+
+-- Reference from .vimrc
+-- vim.opt.mouse = 
+-- vim.cmd 'nnoremap Y Y'
+-- vim.opt.shiftwidth =  
+-- vim.opt.tabstop = 2
+-- vim.opt.autoindent
+-- vim.opt.smartindent
+-- vim.opt.nowrap
+-- vim.opt.hlsearch
+-- vim.opt.incsearch
