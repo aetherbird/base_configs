@@ -7,3 +7,4 @@ alias r44='rsync -avP -e "ssh -p 4444"'
 alias nn="$(which nvim)"
 alias vim="$(which nvim)"
 alias oldvim="$(which vim)"
+alias pylspci='/home/toby/.local/pipx/venvs/pylspci/bin/pylspci'

@@ -104,4 +104,8 @@ fi
 # Add sbin directories to PATH, useful for sudo
 echo $PATH | grep -Eq "(^|:)/sbin(:|)"     || PATH=$PATH:/sbin
 echo $PATH | grep -Eq "(^|:)/usr/sbin(:|)" || PATH=$PATH:/usr/sbin
+#echo $PATH | grep -Eq "(^|:)/home/toby/.local(:|)" || PATH=$PATH:/home/toby/.local/bin
 
+
+# Created by `pipx` on 2024-03-20 00:50:29
+export PATH="$PATH:/home/toby/.local/bin"
