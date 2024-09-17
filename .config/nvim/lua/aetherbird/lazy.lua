@@ -17,7 +17,6 @@ require("lazy").setup("plugin-init")
 --      "folke/which-key.nvim",
 --      "folke/tokyonight.nvim",
 --      "theprimeagen/harpoon",
---      "catppuccin/nvim",
 --      "kepano/flexoki-neovim",
 --      "aetherbird/aetherwind",
 --      "mbbill/undotree",
