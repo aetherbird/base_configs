@@ -8,3 +8,4 @@ alias nn="$(which nvim)"
 alias vim="$(which nvim)"
 alias oldvim="$(which vim)"
 alias pylspci='/home/toby/.local/pipx/venvs/pylspci/bin/pylspci'
+alias workspace='/opt/scripts/workspace'

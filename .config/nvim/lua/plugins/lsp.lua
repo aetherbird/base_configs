@@ -1,12 +1,12 @@
--- require('lsp-zero')
--- require('lspconfig').lua_ls.setup({})
+require('lsp-zero')
+require('lspconfig').lua_ls.setup({})
 -- 
--- local lsp_zero = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 -- 
--- lsp_zero.on_attach(function(client, bufnr)
+ lsp_zero.on_attach(function(client, bufnr)
 --   -- see :help lsp-zero-keybindings
 --   -- to learn the available actions
---   lsp_zero.default_keymaps({buffer = bufnr})
--- end)
+   lsp_zero.default_keymaps({buffer = bufnr})
+ end)
 -- 
 -- -- here you can setup the language servers
