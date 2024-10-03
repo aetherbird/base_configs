@@ -7,3 +7,4 @@ User profile configs and scripts for Debian environments (bash, aliases, vim, nv
 - neovim config with plugins
 - homedir .gitignore
 - tmux config
+- deployment script in .scripts
