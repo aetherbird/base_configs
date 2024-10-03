@@ -9,3 +9,4 @@
 !.config/nvim/
 !.scripts/
 !README.md
+!.tmux.conf
