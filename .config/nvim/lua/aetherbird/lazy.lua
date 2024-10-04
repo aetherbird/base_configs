@@ -26,11 +26,12 @@ require("lazy").setup("plugin-init")
       "nvim-treesitter/nvim-treesitter",
       "nvim-treesitter/playground",
       --  ** Plugins for LSP **
-        "VonHeikemen/lsp-zero.nvim",
-        "neovim/nvim-lspconfig",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/nvim-cmp",
-        "L3MON4D3/LuaSnip",
+        --"VonHeikemen/lsp-zero.nvim",
+        --"neovim/nvim-lspconfig",
+        --"hrsh7th/cmp-nvim-lsp",
+        --"hrsh7th/nvim-cmp",
+        --"L3MON4D3/LuaSnip",
+      "williamboman/mason.nvim"
     })
-
+-- require("mason").setup()
 -- require("lazy").setup(plugins, opts)
