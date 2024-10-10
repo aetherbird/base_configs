@@ -7,6 +7,7 @@
 .config/*
 .config/nvim/lazy-lock.json
 !.config/nvim/
+!.config/i3/
 !.scripts/
 !README.md
 !.tmux.conf
