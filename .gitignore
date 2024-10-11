@@ -8,6 +8,7 @@
 .config/nvim/lazy-lock.json
 !.config/nvim/
 !.config/i3/
+!.config/qtile/
 !.scripts/
 !README.md
 !.tmux.conf
