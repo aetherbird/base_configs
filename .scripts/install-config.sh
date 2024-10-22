@@ -3,7 +3,6 @@
 # update apt cache, install git vim and rsync
 apt-get update
 apt-get install -y git rsync vim tmux ripgrep curl mlocate wget
-
 # remove any neovim from package manager
 apt-get remove neovim
 
