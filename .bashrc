@@ -17,9 +17,9 @@ case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
-echo $PATH | grep -Eq "(^|:)/opt/nvim/bin(:|)" || PATH="$PATH:/opt/nvim/bin"
+#echo $PATH | grep -Eq "(^|:)/opt/nvim/bin(:|)" || PATH="$PATH:/opt/nvim/bin"
 export PATH
-export VISUAL=/opt/nvim/bin/nvim
+#export VISUAL=/opt/nvim/bin/nvim
 export EDITOR="$VISUAL"
 
 force_color_prompt=yes
