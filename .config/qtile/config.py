@@ -128,5 +128,5 @@ wmname = "LG3D"
 def autostart():
     home = os.path.expanduser('~')
     subprocess.Popen([home + '/.config/qtile/audio_fix.sh'])
-	subprocess.Popen(['xfsettingsd'])
+    subprocess.Popen(['xfsettingsd'])
     subprocess.Popen(['nm-applet'])
