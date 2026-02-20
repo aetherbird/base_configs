@@ -1,0 +1,40 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 18px;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.85); /* Your Dark Charcoal */
+    border: 1px solid rgba(214, 224, 255, 0.1);
+    border-radius: 8px;
+    color: #c0caf5;
+}
+
+#clock {
+    color: #7aa2f7; /* Your Blue Accent */
+    background: rgba(65, 72, 104, 0.3);
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 4px 0;
+}
+
+#workspaces button {
+    color: #a9b1d6;
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+#workspaces button.focused {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+}
+
+#mpris {
+    color: #9ece6a; /* Green for playing media */
+    padding: 0 10px;
+}
+
+#pulseaudio, #network, #tray, #window {
+    padding: 0 10px;
+}

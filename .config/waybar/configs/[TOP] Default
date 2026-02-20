@@ -1,0 +1,72 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 4,
+    "fixed-center": true,
+
+    "modules-left": [
+        "niri/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "niri/workspaces",
+        "mpris",
+        "pulseaudio",
+        "network",
+        "tray"
+    ],
+
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "focused": "",
+            "active": ""
+        }
+    },
+
+    "niri/window": {
+        "format": "{}",
+        "max-length": 30
+    },
+
+    "clock": {
+        "format": " {:%a, %d | %H:%M} ",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵",
+            "firefox": "󰈹",
+            "chromium": ""
+        },
+        "max-length": 30
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": { "default": ["", "", ""] }
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 40,
+    "spacing": 4,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "fixed-center": true,
+
+    "modules-left": [
+        "niri/workspaces",
+        "niri/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "mpris",
+        "pulseaudio",
+        "network",
+        "tray"
+    ],
+
+    "niri/workspaces": {
+        "format": "{index}"
+    },
+
+    "niri/window": {
+        "format": "{}",
+        "max-length": 30,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%a, %b %d | %H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "format-paused": " {status_icon} <i>{title}</i>",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵",
+            "firefox": "󰈹",
+            "chromium": ""
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "max-length": 30
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}

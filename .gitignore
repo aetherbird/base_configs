@@ -9,6 +9,9 @@
 !.config/nvim/
 !.config/i3/
 !.config/qtile/
+!.config/waybar/
+!.config/niri/
+!.config/hypr
 !.scripts/
 !README.md
 !.tmux.conf
