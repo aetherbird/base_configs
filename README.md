@@ -8,4 +8,4 @@ User profile configs and scripts for Debian environments (bash, aliases, vim, nv
 - homedir .gitignore
 - tmux config
 - deployment script in .scripts
-- Niri and Wayland desktop configuration
+- niri and wayland desktop configuration
