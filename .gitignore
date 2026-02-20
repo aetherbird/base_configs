@@ -12,6 +12,7 @@
 !.config/waybar/
 !.config/niri/
 !.config/hypr
+!.config/kitty
 !.scripts/
 !README.md
 !.tmux.conf
