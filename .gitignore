@@ -13,6 +13,7 @@
 !.config/niri/
 !.config/hypr
 !.config/kitty
+!.config/fuzzel
 !.scripts/
 !README.md
 !.tmux.conf
