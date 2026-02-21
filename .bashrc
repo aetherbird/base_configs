@@ -81,6 +81,9 @@ echo $PATH | grep -Eq "(^|:)/usr/sbin(:|)" || PATH=$PATH:/usr/sbin
 
 
 # Created by `pipx` on 2024-03-20 00:50:29
-export PATH="$PATH:~/.local/bin"
+# export PATH="$PATH:~/.local/bin"
 
-colorscript -r
+# colorscript -r inly if installed
+if command -v colorscript >/dev/null 2>&1; then
+    colorscript -r
+fi
