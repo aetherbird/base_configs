@@ -1,0 +1,41 @@
+#!/bin/bash
+set -e
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run with sudo!"
+   exit 1
+fi
+
+TOTAL_CORES=$(nproc)
+# leave 2 cores free, but ensure we use at least 1
+USE_CORES=$(( TOTAL_CORES > 2 ? TOTAL_CORES - 2 : 1 ))
+
+TIMESTAMP=$(date +%Y%m%d%H%M)
+ARCHIVE_FILE="/nitro/arch-backup/arch_full_$TIMESTAMP.tar.zst"
+START_TIME=$(date +%s)
+
+echo "System: $TOTAL_CORES cores detected. Using $USE_CORES for backup."
+echo "Target: $ARCHIVE_FILE"
+echo "------------------------------------------------------"
+
+read -p "Proceed? (y/n): " confirm
+if [[ $confirm != [yY] ]]; then exit 1; fi
+
+# cleanup on interrupt (ctrl+c)
+trap 'echo -e "\nInterrupted. Cleaning up partial file..."; rm -f "$ARCHIVE_FILE"; exit 1' INT
+
+echo "Starting backup... (Level 9 Compression)"
+
+# -T$USE_CORES - use the calculated core count
+tar --one-file-system --xattrs --acls -p -P \
+    --exclude='/lost+found' \
+    --exclude='/nitro' \
+    -cf - / /boot/efi | zstd -f -T$USE_CORES -9 -o "$ARCHIVE_FILE"
+
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
+
+echo "------------------------------------------------------"
+echo "Backup Complete!"
+echo "Time Taken: $(($DURATION / 60))m $(($DURATION % 60))s"
+echo "Final Size: $(du -sh "$ARCHIVE_FILE" | cut -f1)"

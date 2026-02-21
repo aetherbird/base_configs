@@ -1,0 +1,36 @@
+#!/bin/bash
+set -e
+
+# 1. Root Check
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run with sudo!"
+   exit 1
+fi
+
+TIMESTAMP=$(date +%Y%m%d%H%M)
+ARCHIVE_FILE="/nitro/arch-backup/arch_full_$TIMESTAMP.tar.zst"
+
+echo "Target Archive: $ARCHIVE_FILE"
+echo "------------------------------------------------------"
+
+read -p "Proceed with compressed backup? (y/n): " confirm
+if [[ $confirm != [yY] ]]; then
+    exit 1
+fi
+
+echo "Starting backup and compression..."
+echo "Using all i9 cores via Zstd..."
+
+# --one-file-system: stays on / (ignores /nitro, /proc, etc)
+# --xattrs --acls: keeps Arch metadata
+# -p: preserves permissions
+# -P: absolute-names (keeps the leading / so restore is exact)
+# -I: filters through zstd with all cores (-T0) and high compression (-15)
+tar --one-file-system --xattrs --acls -p -P \
+    --exclude='/lost+found' \
+    --exclude='/nitro' \
+    -cf - / /boot/efi | zstd -T0 -15 -o "$ARCHIVE_FILE"
+
+echo "------------------------------------------------------"
+echo "Backup Truly Complete!"
+echo "Archive Size: $(du -sh "$ARCHIVE_FILE" | cut -f1)"
